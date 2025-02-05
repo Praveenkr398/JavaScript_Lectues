@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture: 54 : promise</title>
+</head>
+<body>
+    <script>
+        // promise : use for parreller exicution: solution of callbacks hall
+
+
+        // new Promise(function(resolve,reject){        })
+
+        let myPromise = new Promise (function(resolve, reject){
+           console.log("hello mister")
+        //    resolve (34)
+           reject(333)
+        })
+        
+        console.log(typeof myPromise)
+        console.log(myPromise)
+
+
+        // just checking purpose... 
+
+        console.log("Hello 1st")
+        console.log("hello 2nd")
+        console.log("hello 3rd")
+
+        
+        setTimeout(() => {
+            console.log("hello 4th")  
+        },5000);
+    </script>
+</body>
+</html>

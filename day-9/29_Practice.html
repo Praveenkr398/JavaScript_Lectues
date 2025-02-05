@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lec_29: Chepter_6 : Practice</title>
+</head>
+
+<body>
+    <h2>Lec_29: Chepter_6 : Practice</h2>
+    <script>
+        // Lec_29: Chepter_6 : Practice
+
+        // Q1 : drive or not : Again & Again 
+
+        let canDrive = (user) => {
+            return user > 18 ? true : false;
+        }
+
+        let runAgain=true;
+        while (runAgain) {
+            let user = prompt("enter your age")
+            user = Number.parseInt(user)
+            
+            if (canDrive(user)) { 
+                alert("yes! you can drive")
+            }
+            
+            else if (user < 0){
+               alert("Please! write valid Age");  
+            }
+
+        else {
+            alert("sorry! you can't drive")
+        }
+    runAgain = confirm("Do you want to check Again?")
+        }
+
+
+       
+
+
+        // // Q1 : drive or not
+        // let user =prompt("enter your age")
+        // user = Number.parseInt(user)
+        // if (user>18){
+        //     alert("yes! you can drive")
+        // }
+        // else{
+        //     alert("sorry! you can't drive")
+        // }
+        // console.log(user)
+
+    </script>
+</body>
+
+</html>

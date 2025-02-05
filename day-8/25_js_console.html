@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lec_15: console in js</title>
+</head>
+<body>
+    <h1>Lec_15: console in js</h1>
+    <p id="num"></p>
+    <script>
+        //Lec_15: console in js
+
+
+        // type of console ..
+         console.log(console)
+
+         // 1 : (log): Print the text you want
+         console.log("Hello Coders: How's the jose")
+
+         // 2 : (log): print the values you access
+
+         let myList = {
+            chocolate : "Dairy Milk",
+            bickit : "Good Day",
+            milk : "sudha"
+         }
+
+         console.log(myList) // access myList and print that value
+
+         // 3 : (table) : make table for object 
+         console.table(myList)
+
+         // 4 : (info) : write an info text
+         console.info("this text contain info")
+
+         // 5 : (error) : write an error text
+         console.error("error some here (red)")
+
+         // 6 : (warn): write an warning text
+         console.warn("this is warning text (yellow)")
+
+         // 7 : assert 
+         console.assert(5<10)  // no error bcz statement it's 
+         console.assert(5>1)  // no error bcz statement  it's true
+         console.assert(5<2) // *Assertion failed bcz it's false
+
+         // 8 : time : show time what taken to exicution
+         
+         // start time
+         console.time("Label")
+         
+         // time calculating
+         console.log("hello") // time taken to write Hello 
+
+         
+         //  example:1
+         console.time("total time")
+         let n = prompt("write any number to calculate the time has been taken to write")
+         for (i=0; i<=n;i++){
+             console.log(i)
+             i++
+            }
+            
+            // end time
+            console.timeEnd("Label")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+body{background-color: antiquewhite;}
+
+h1{
+    color: rgb(221, 13, 207);
+    background-color: aqua;
+}
+h2{background-color: goldenrod;}
+
+span{background-color: magenta;}
+
+button{
+    background-color: rgb(59, 240, 18);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 78 : Inheritance Extend</title>
+</head>
+<body>
+    <h1>Inheritance Extend</h1>
+    <p>it used for creating new behavior claass of existing class</p>
+    <p>used /extend/ keyword</p>
+
+    <script>
+        class animal  {
+            constructor(name,diff,country,life,live){
+                this.name = name;
+                this.diff = diff;
+                this.country = country;
+                this.live = live;
+                this.life = life
+            }
+
+            details(){
+                console.log(`this is ${this.name} , color is ${this.diff} and it from ${this.country}`)
+            }
+        }
+
+        
+        class WaterAnimal extends animal{
+         
+          
+            living (){
+                console.log(`live in ${this.live} and it's a ${this.life} animal`)
+            }
+        }
+        
+        let monkey = new animal("sonu","gold","india")
+        // monkey.details()
+        // monkey.living()
+
+
+        let snake = new WaterAnimal("sonu","gold")
+        snake.living()
+        snake.details()
+
+
+    </script>
+</body>
+</html>

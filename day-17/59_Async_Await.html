@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 59: Async and Await</title>
+</head>
+
+<body>
+    <h3>Async and Await used for multiple promises return parrelar values can wait for another</h3>
+    <script>
+
+        async function myWeather() {
+
+            let delhiWeather = new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+                    resolve("32 degree")
+                }, 1000);
+            })
+            let puneWeather = new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+                    resolve("28 degree")
+                    // reject(new Error("some error in fatching pune weather"))
+                }, 5000);
+            })
+
+            delhiWeather.then(console.log("first code"))
+            puneWeather.then(console.log("second code"))
+
+            // console.log("Fetching Delhi Weather please wait ...")
+            let delhiWther = await delhiWeather
+            // console.log("Factched Delhi Weather: ", delhiWeather)
+            
+            
+            // console.log("Fetching pune Weather please wait ...")
+            let puneWther = await puneWeather
+            // console.log("Factched pune Weather: ", puneWeather)
+
+            return [delhiWther, puneWther]
+        }
+
+        console.log("Welcome to Weather list bord")
+        let a = myWeather()
+       a.then((value)=>{
+        console.log(value)
+       })
+
+    //    delhiWeather.then((x)=>{
+    //        console.log(x)
+    //     })
+    //     puneWeather.then((x)=>{
+    //        console.log(x)
+    //     })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 14:-15 Array</title>
+</head>
+<body>
+    <script>
+        // lecture 14 : Array
+
+let someNum = [2,4,6,7,89]
+console.log(someNum)
+console.log(someNum[2] , "print 6")
+console.log(someNum[4] , "print 89")
+console.log(someNum.length)
+console.log(someNum.concat("new add"))
+console.log(someNum.fill(1,2,1,))
+console.log(someNum.flat(2))
+console.log(someNum.indexOf(3)) // -1 bcx unavaiable
+console.log(someNum.indexOf(2)) // index 0
+console.log(someNum.includes(89)) // true , false
+console.log(someNum.join('-')) // - adding each other
+console.log(someNum.toString())
+
+console.log(someNum)
+let pullNu = someNum.pull
+console.log(pullNu)
+console.log(someNum)
+console.log(someNum.push('new'))
+console.log(someNum)
+
+let Arry1 = [1,2,3,4,5]
+let Arry2 = ['A','B','C','B','E']
+console.log(Arry1)
+console.log(Arry2)
+console.log(Arry2.concat(Arry1))
+// console.log(Arry1.sort()) // used by function
+
+console.log(Arry2.unshift("Alpha"))
+console.log(Arry2)
+console.log(Arry2.shift())
+console.log(Arry2)
+
+// Sub-Array
+let SubArray = [1,2,3,['a','b','c'],'1st','2nd','3rd', ['deep info',[10,100,[20,200,[30,300]]]]]
+console.log(SubArray)
+console.log(SubArray.flat(Infinity)) // all sub-array in main array
+
+let array1 = [1,2,3]
+let array2 = [4,5,6]
+let array3 = [7,8,9,0]
+console.log(array1.concat(array2.concat(array3)))
+console.log(...array1,...array2,...array3)
+    </script>
+</body>
+</html>

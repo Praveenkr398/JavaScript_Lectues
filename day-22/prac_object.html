@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 1</title>
+</head>
+<body>
+    <h1>object and prototype</h1>
+
+    <script>
+
+        let animal = {
+            name: "parrot",
+            live: "land",
+            fly : "yes",
+            work:function () {
+                console.log(this.name,"live on land and fly also")
+                console.log(`${this.name} can speak like human sometime`)
+            }
+        }
+        
+        console.log(animal.work())
+    </script>
+
+    <script>
+        console.log("New practice set")
+
+        let company ={
+            name : "FormaKey",
+            est : 2020,
+            emp :36,
+            view () {
+                console.log(`this company ${this.name} is established in ${this.est}`)
+            },
+
+            tax:"overroll 5%"
+        }
+
+        console.log(company.view())
+
+        //here some company's employees 
+
+        let emp1 = {
+            name : "mohan kumar",
+            work: "developer",
+            salary: 50000,
+          
+        }
+
+        emp1.__proto__ = company // emp access properties of company
+        console.log(emp1.name , "has credit ", emp1.salary , "from ",company.name)
+    </script> 
+</body>
+</html>

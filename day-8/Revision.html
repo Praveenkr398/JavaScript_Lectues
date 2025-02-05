@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day-8 : Array methode Revision </title>
+</head>
+<body>
+    <h2>day-8 : Array methode Revision</h2>
+    <script>
+        // day-8 : Array methode Revision
+        console.log("day-8 : Array methode Revision")
+
+        let myNum = [3,4,5,6,7,8,2];
+        console.log(myNum)
+        
+        // loops in array 
+
+        // 1: For Loop for creating array each element 
+        console.log("for of loop")
+
+        for (i=0; i<myNum.length; i++){
+            console.log(myNum[i]) // 
+        }
+
+        // 2: for of loop : easy then for loop
+        console.log("for of loop: element")
+        
+        for (let i of myNum){
+            console.log(i)
+        }
+        
+        for (let i of myNum){
+            console.log([i])
+        }
+        
+        // 3: for in loop : access array position/index
+        console.log("for in loop: index")
+        
+        for (let i in myNum){
+            console.log(i)
+        }
+
+        // 4 : forEach : Operation with each Array 
+        console.log("forEach : for operation with each element")
+        console.log("My Number: ", myNum)
+
+        // Element * 3 with each element
+        let Num2 = myNum.forEach((a)=>{
+            console.log( `Original No : ${a} and Original * 3 times:  ${a*3}`)
+        })
+       
+        // Operation with each element
+        let CallNo = myNum.splice(0,3)
+        console.log("removed no:",CallNo)
+        console.log("after remove no:",myNum)
+
+        // work on callNO 
+        let Add = CallNo.forEach((Add) =>{
+            
+            console.log(`Orignial No: ${Add} now Add 5 = ${Add+5}`)
+            console.log(`Orignial No: ${Add} make Square = ${Add*Add}`)
+            console.log(`Orignial No: ${Add} make Square = ${Add*Add*Add}`)
+        })
+
+        // forEach : container 3 parameter: 1; Value(a), index(b), array(c)
+        let Num3 = CallNo.forEach((a,b,c)=>{
+            console.log(b,a, c)
+            // return (a*4) // this will not work
+        })
+        
+        // map: same as forEach but its create new array
+        let Num4 = CallNo.map((a,b,c) =>{
+            console.log(a,b,c)
+            return (a*4)
+        })
+        console.log(Num4) // map : return the value as array
+
+        // filter: filter the array element 
+        let fno = [3,4,5,18,13,49,38,43,89,60,200,399,499]
+        console.log("full Number:",fno)
+        
+        // less then 10
+        let Num5 = fno.filter((i) =>{
+            return i<10
+        })
+        console.log(Num5)
+
+        // less then 50
+        let Num6 = fno.filter((i) =>{
+            return i<50
+        })
+        console.log(Num6)
+
+        // greater then 100
+        let Num7 = fno.filter((i) =>{
+            return i>100
+        })
+        console.log(Num7)
+
+        // reduse : calculate the total value of array
+
+        let CallNO = [2,3,4,5]
+        console.log(CallNO)
+        
+        // total value 
+        let Num8 = CallNo.reduce((a,b) =>{
+        return a + b
+        })
+        console.log("addition",Num8)
+
+        // total Multiple 
+        let Num9 = CallNo.reduce((a,b) =>{
+        return a * b 
+        })
+        console.log("miltiple",Num9)
+
+
+        
+
+        
+
+        
+
+    </script>
+</boay>
+</html>

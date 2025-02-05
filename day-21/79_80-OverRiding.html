@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 79/80: Overriding , super</title>
+</head>
+<body>
+    <h1>Overriding and super</h1>
+    <p>overring parent methode in child class use "super" keyword</p>
+
+    <script>
+        class jobRole {
+            constructor(name,role,salary,state){
+                this.name = name ;
+                this.role = role;
+                this.salary = salary;
+                this.state = state;
+               
+            }
+
+            logIn(){
+                console.log(`Hey, ${this.name}, you are from ${this.state}`)
+            }
+
+            logout(){
+                console.log(`Hey, ${this.name} from ${this.state} experties ${this.expt}`)
+            }
+
+            promotion(salary){
+                console.log(`Hey ${this.name}!Now your salary is ${this.state}`)
+            }
+        }
+
+        class HRteam extends jobRole {
+
+        promotion(salary){
+            super.promotion(`${this.expt} + 10000}`)
+             }
+        }
+
+        let employee1 = new HRteam("ROHIT","HR Manager",90000 ,"bihar","3yr")
+        let employee2 = new jobRole("Santosh","HR Manager",50000)
+        // employee1.logIn() // from parent class
+        employee1.logout()
+        employee1.promotion()
+        // employee1.promotion()
+        // employee1.promotion() // from cild class
+        // employee2.promotion()
+
+    </script>
+</body>
+</html>

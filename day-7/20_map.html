@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 20: map, filter, reduce</title>
+</head>
+<body>
+    <h2>Lecture 20: map, filter, reduce</h2>
+    <script>
+        //Lecture 20: map, filter, reduce
+
+        let num = [2,3,5,6,8,10];
+        console.log(num)
+        
+        //Array Map method: create new array
+        
+        let myMap = num.map((value,index,array) =>{
+            console.log(value,index,array)
+            return value + 4
+        })
+        console.log(myMap) // Map: create new array
+
+        //forEach methode : operation each element
+        let opr = num.forEach((value,index,array) =>{
+            console.log(value,index,array)
+            return value + 4
+            
+        })
+        console.log(opr)  // can't create new array
+        
+        //filter method in array
+        // filter the element what made in function
+
+        let num2 = [3,48,29,40,48,22,4,23,10]
+        let fill = num2.filter((a)=>{
+            return a<19 // print only less than 19
+            return a<50 // print only less than 19
+        })
+        console.log(fill)
+
+        let fill2 = num2.filter((a)=>{
+            return a > 10 // print only greater than 19
+        })
+        console.log(fill2)
+
+        // reduce method ; create an array valuse
+        let num3 = [2,3,4,5,8,2,4,5]
+        let Newval = num3.reduce((h1,h2) =>{
+            // return h1 * h2 // print multiple of each element
+        return h1 + h2 // add element 1 and element 2 again and again
+        })
+        console.log(num3) // 33: its a values
+        console.log(Newval) 
+
+        let Newval1 = num3.reduce((h1,h2,h3) =>{
+        return h1 + h2 + h3 // first add 1st, 2nd, 3rd element then result will be added next 2 element
+        })
+        console.log(Newval1)
+
+    </script>
+</body>
+</html>

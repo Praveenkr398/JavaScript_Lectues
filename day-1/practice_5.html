@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice day 1</title>
+</head>
+<body>
+    <script>
+
+        // Q1: make a alert popup
+
+        // alert("this is first practice code");
+
+        // Q2: Print "Hello World"
+
+        console.log("Hello World");
+
+        // Q3: text + number 
+
+        let fname = "Mohit";
+        let age = 24;
+        console.log(fname+age);
+
+        // Q4: find data type of Q3
+
+        console.log(typeof fname);
+        console.log(typeof age);
+        console.log(typeof (fname+age));
+
+        // Q5: conts object & change string and number with same variable
+        const students = {
+            fname : "Mohit Kumar",
+            friend : "Lovish roy",
+            field : "Micro",
+            salary : 45000,
+        }
+
+        console.log(students["fname"])
+
+        // students = "kayva" // can't asign again with same name as string
+        // students = 420 // can't asign again with same name as number
+
+        // Q6: add new key to Q5
+
+        students['fname'] = "Sonu Kumar" //change fname with sonu kumar
+        console.log(students)
+        
+        students['exp'] = "5years"
+        console.log(students)
+        
+
+        // Q7: make dictionary of 5 words
+
+        const disc = {
+            farrow : "produce a litter of pigs",
+            prehensile : "adapted for seizing, grasping, or taking hold of something",
+            gelid : "very cold; icy",
+            mosey : "to wander or shuffle about leisurely; stroll; saunter",
+            remiform : "having the form of a branch; branchlike",
+        }
+
+        console.log(disc["mosey"])
+
+    </script>
+</body>
+</html>

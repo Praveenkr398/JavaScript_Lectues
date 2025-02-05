@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lect-9: data type overview </title>
+</head>
+<body>
+    <script>
+        // 2 type of data type 
+        // 1: primitive (value): string,  symbol, number , null, bigInt, boolean, undefined
+        // 2: Non-Primitive (ref) : object , array, function
+         let mytext = "mohit kumar"
+         let mySym = Symbol("i love symbolic text");
+         let myNum = 842 
+         let myNull = null
+         let myNum2 = 2328340823080930930344443444444444999999999999999999999999999999232834082308093093034444344444444499999232834082308093093034444344444444499999232834082308093093034444344444444499999232834082308093093034444344444444499999444232834082308093093034444344444444499999232834082308093093034444344444444499999232834082308093093034444344444444499999
+         let mybig = 2328340823080930930344443444444444999999999999999999999999999999232834082308093093034444344444444499999232834082308093093034444344444444499999232834082308093093034444344444444499999232834082308093093034444344444444499999444232834082308093093034444344444444499999232834082308093093034444344444444499999232834082308093093034444344444444499999n // BigInt number :n
+         let uknow;
+         console.table([mytext,mySym,myNum,myNull,myNum2,mybig,uknow])
+         console.log(typeof mytext,mytext)
+         console.log(typeof mySym,mySym)
+         console.log(typeof myNum,myNum)
+         console.log(typeof myNull,myNull)
+         console.log(typeof myNum2,myNum2)
+         console.log(typeof mybig,mybig)
+         console.log(typeof uknow,uknow)
+
+         // non primitive data type 
+         // object {}, array[], function (){}
+
+         let myojb = {
+            fName : "Mohit",
+            lName : "kumar",
+            age : 33
+         }
+
+         console.table(myojb)
+         console.log(typeof myojb, myojb)
+         console.log("First Name:", myojb.fName)
+         console.log("Last Name:", myojb["lName"])
+
+         let myarray = ["bihar","up", "gujrat", "pune"]
+         let arrData = ["mohit", "pune", 33]
+         console.table(myarray)
+         console.log(typeof arrData, arrData)
+         console.log( typeof myarray, myarray)
+
+
+        let funcData = function(){
+            console.log("function data type")
+         }
+
+         console.log(funcData())
+         console.log(typeof funcData)
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async - Await</title>
+</head>
+<body>
+    <h1>Async & Await </h1>
+    <p>Async: always return a promise, </p>
+    <p>Await: pauses the other execution</p>
+    <script>
+
+      async  function getData(dataId){
+            let myPromise = new Promise ((resolve,reject)=>{
+                setTimeout(() => {
+                    console.log("data",dataId)
+                    resolve(200)
+                }, 1000);
+            })
+            
+                  let p = await myPromise;
+                  console.log(p)
+                  return(p)
+        };
+       
+       
+        
+
+
+        
+    
+    </script>
+</body>
+</html>

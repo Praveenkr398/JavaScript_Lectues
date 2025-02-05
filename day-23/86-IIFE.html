@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 86: IIFE</title>
+</head>
+<body>
+    <h1>IIFE:</h1>
+    <p>immediately invoked function expression</p>
+    <script>
+        let a = ()=>{
+            return new Promise((resolve,reject)=>{
+                console.log("exicuting this code")
+                setTimeout(() => {
+
+                    resolve("hey honey")
+                }, 2000);
+            })
+        }
+        
+// // need to make extra funtion and call it
+// let f = async ()=>{ 
+
+//     let b = await a();
+//     console.log(b)
+//     let c = await a();
+//     console.log(c)
+// }
+
+// f() // invoked it
+
+
+//  no need to make new funtion and call it
+( async ()=>{ 
+
+    let b = await a();
+    console.log(b)
+    let c = await a();
+    console.log(c)
+})()  // IIFE syntax 
+    </script>
+</body>
+</html>

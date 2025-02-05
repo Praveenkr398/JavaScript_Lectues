@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture_56 : promise chaining .then</title>
+</head>
+<body>
+    
+    <!-- chaining   in promise . working cordinating i mean. 1st work .then after exicute 1 then run 2nd then 3rd so on -->
+
+    <script>
+
+        let myPromise = new Promise ((resolve, reject)=>{
+          setTimeout(() => {
+            console.log('reseolved after 2 second')
+            resolve("2000MiliSecond")
+          }, 2000);
+        })
+
+        myPromise.then((value)=>{
+            console.log(value)
+        }) .then((value)=>{
+            console.log("done : " ,value)
+            return 1000
+        })
+        .then((value)=>{
+            console.log(value)
+        })
+
+
+
+    </script>
+
+</body>
+</html>

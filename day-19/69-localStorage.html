@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage </title>
+</head>
+
+<body>
+    <h1>Local Storage</h1>
+    <p>Local Storage: store data in browser application>localStorage </p>
+    <p>available : refresh, new tab, closing/opening (long time)</p>
+    <script>
+
+        // .setItem(key,value)
+        localStorage.setItem("name", "M.SuryaKant")
+        localStorage.setItem("edu", "B.tech")
+        localStorage.setItem("age", "34")
+        localStorage.setItem("local", "bihar")
+        localStorage.setItem("nation", "india")
+
+        // .getItem(key) ; get the key's value
+        console.log(localStorage.getItem("name"))  // get value by its key name
+        console.log(localStorage.getItem("nation"))  // get value by its key name
+        console.log(localStorage.setItem("name","mohit"))
+        console.log(localStorage.setItem("edu","bsc"))
+
+        console.log(localStorage            )
+
+        // localStorage.removeItem("age") // delet age
+        // localStorage.clear() // delet everything
+        // console.log(localStorage.length) // length of keys
+    //   console.log(localStorage.key(1)) // get index keys
+
+
+        // Storage Event: make Alert when updates
+    //   let newData = window.onstorage = ((e) => {
+    //         alert("Some update");
+    //         console.log(e);
+    //     })
+    </script>
+</body>
+
+</html>

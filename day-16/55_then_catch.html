@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture_55: promises: .then & .catch</title>
+</head>
+
+<body>
+    // .then and .catch
+
+    <script>
+        let myPromise1 = new Promise((resolve, reject) => {
+            console.log('pendding now')
+            setTimeout(() => {
+                console.log("fulfilment has been resolve")
+                resolve("Success")
+            }, 3000);
+        })
+
+        let myPromise2 = new Promise((resolve, reject) => {
+            console.log('pendding now')
+            setTimeout(() => {
+                console.log("fulfilment has been rejected")
+                reject(new Error("some error"))
+            }, 5000);
+        })
+
+        myPromise1.then((value)=>{
+            console.log(value)
+        })
+
+        myPromise2.catch((error)=>{
+            console.log("error handling with .catch")
+            console.log(error)
+        })
+
+       
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 82: Getter & Setter</title>
+</head>
+
+<body>
+    <h1>Getter & Setter</h1>
+    <p>use <b>get</b>keyword to get data</p>
+    <p>use <b>set </b>keyword to set new data</p>
+    <script>
+        class person {
+            constructor(name, from) {
+                this._name = name;
+                this.from = from;
+            }
+            get name() {
+                return this._name // get the name
+            }
+            set name(newName) {
+                this._name = newName // set new name
+            }
+
+            viewData() {
+                console.log("welcome")
+                console.log(`Name: ${this.name}\n from: ${this.from}`)
+            }
+
+        }
+
+        let a = new person("Santosh", "bihar")
+        console.log(a.name)
+
+        a.name = "khan" // set new name
+        console.log(a.name)
+
+        let b = "hey honey"
+        console.log(b)
+
+        // instanceof : chek any object belongs to any class or not 
+        console.log(a instanceof person) // true: yes
+        console.log(b instanceof person) // false
+
+
+    </script>
+</body>
+
+</html>

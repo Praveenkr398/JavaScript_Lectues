@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectute 88: Scope</title>
+</head>
+<body>
+    <h1>scope in js</h1>
+    <p>there are 3 type of scope</p>
+    <dl>
+        <li>global scope</li>
+        <dd>var is global scope variable</dd>
+        <li>block scope</li>
+        <dd>let and const is block scope variable</dd>
+        <li>function scope</li>
+    </dl>
+    <script>
+        // global scope
+        var a = 99;
+        console.log("gloabl",a) //ok
+
+        {
+            var b = 88;
+            console.log("inside block",b) // ok
+        }
+
+        console.log("access inside var ",b ) // ok
+
+
+        // block scope
+        let c = "let"
+        console.log(c)
+        {
+            let d = "letBlock"
+            console.log("accessing inside",d)
+            console.log("accessing globle",c)
+        }
+        // console.log("accessing outside",d) // error bcz let block scoep variable
+
+
+        const e = "const"
+        console.log(e)
+        {
+            const f = "constBlock"
+            console.log("accessing inside",f)
+            console.log("accessing globle",e)
+        }
+        // console.log("accessing outside",f) // error bcz conts block scoep variable
+
+
+        var m = 30;
+        // let m = 33; // can't declared m again
+        // const m = 33; // can't declared m again
+        console.log(m)
+
+        var mko = "var1"
+        console.log(mko)
+        var mko = "varAgain" // var can difine again and again
+        console.log(mko)
+        {
+            var mko = "var2"
+            console.log(mko) // same variable
+        }
+
+
+        let mk = "let-1"
+        // let mk = "let-1" // can't define again and agian
+        console.log(mk)
+        {
+            let mk = "let 2"
+            console.log(mk) // same variable
+        }
+
+        const con = "const 1"
+        // const con = "constAgian" // can't define again and again
+        console.log(con)
+        {
+            const con = "const 2"
+            console.log(con)
+
+        }
+
+    </script>
+</body>
+</html>

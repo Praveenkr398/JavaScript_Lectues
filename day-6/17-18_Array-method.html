@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 17 : Array methods</title>
+</head>
+<body>
+    <h1>Lecture 17 : Array methods</h1>
+    <script>
+        // Lecture 17 : Array methods
+
+        
+        let array = [3,5,6,7,8,2];
+        console.log(array, typeof array); // print array like [..]
+        
+        // toString : convert Array to String 
+        let str = array.toString() 
+        console.log(str , typeof str) // print string like ,,,,
+        
+        // join : joint array like 1_2_3
+        let joint = array.join("_")
+        console.log(joint , typeof joint)
+        
+        // pop & push : out the last array
+        let pop = array.pop() // pop out last value
+        console.log(array, pop)
+
+        let push = array.push(4) // add 4 value and length 6 
+         console.log(array,push)
+
+         let shift = array.shift()
+         console.log(array, shift) // remove first value
+
+         let unShift = array.unshift(33) // add 33 in first and length 6
+         console.log(array, unShift) // remove first value
+
+         // short : shorting the array values
+
+         let myNum = [1,2,39,42,3,59,89,44,199,0];
+         let sort = myNum.sort();
+         console.log(sort); // sort by 1,199,2,24,3,4,5,6555,7 (0,1,2,3,4,5,6,7,8,9)
+        
+
+
+         // sort by number in accending order
+
+         let comAss = (a,b) =>{
+            return a - b
+         }
+         let NewNum = [2,33,299,55,46,98,900]
+            NewNum.sort(comAss)
+         console.log(NewNum)
+
+         // reverse ; reverse the array 
+                  console.log("reverse of uper array :", NewNum.reverse())
+                  
+         // sort by number in decending order
+
+         let comDes = (a,b) =>{
+            return b - a
+         }
+         let NewNum2 = [2,33,299,55,46,98,900]
+            NewNum2.sort(comDes)
+         console.log(NewNum2)
+
+         // slice : cut the array 
+         let slice = NewNum2.slice(2); // print idx from 3 to end
+         console.log(slice) 
+         console.log(NewNum2.slice(3,5)) // print ind 3 to 5 only
+
+         // splice : modify original array and print delet array
+
+         let MyVal = [44,52,39,29,47,98,85,32,11,36];
+
+         let splice = MyVal.splice(3,2,101,1002,10003,100004); 
+         console.log(MyVal)
+         // modify original array
+                                // 3: start from indx 3
+                                // 2: delet 3rd 4th positioned values
+                                // other: add these values then others valuse continues print
+          
+        // this will print only deleted valuse
+         console.log(splice)
+
+         
+
+        </script>
+</body>
+</html>

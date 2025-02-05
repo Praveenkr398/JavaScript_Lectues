@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day:3 - practice</title>
+</head>
+<body>
+    <h1>Day:3 - Document practice</h1>
+    
+    <script>
+        // data type: object 
+
+        const herFigure = {
+            firstName : "Kavya",
+            lastName : "Singh",
+            Age : 20,
+            locality : "Delhi"
+        };
+        
+        
+        console.log(herFigure) // print herFigure valuse
+        console.log("Kavya's Age = ", (herFigure.Age)) //acces age 
+        console.log("Kavya's status = ", herFigure["status"]) //acces age  
+        
+        herFigure.status = "single", // add extra info
+        console.log(herFigure.status)
+
+        delete herFigure.locality
+        console.log(herFigure.locality) // locality deleted can't print
+
+        // nasted object 
+
+        const person = {
+            fullName : "john doe",
+            work : "developer",
+            exp : "10 years",
+            profile : {
+                wipro : "Wipro 2yr",
+                meesho : "Meesho 5yr",
+                flipkart :"Flipkar 5yr",
+
+            }
+        }
+
+        console.log(person)
+
+        console.log(person["work"])
+        console.log("my job profile",person.profile)
+        console.log("worked with", person.profile.meesho)
+        console.log("worked with", person.profile.flipkart)
+        console.log("worked with", person.profile.wipro)
+        
+        let x = "profile";
+        let y = "meesho";
+        let z = "flipkart";
+
+        console.log("new values =",x)
+        console.log("new values =",person[x][y]) // access Nested value inside meesho of profile
+        
+    </script>
+    
+</body>
+</html>

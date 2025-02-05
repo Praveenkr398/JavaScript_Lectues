@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise chaining</title>
+</head>
+
+<body>
+    <h1>promise chaning: </h1>
+    <p>its allows us to execution sync wise</p>
+    <script>
+        function myPromise1() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("fatching data 1")
+                    resolve("data-1")
+                }, 2000);
+            })
+        }
+        function myPromise2() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("fatching data 2")
+                    resolve("data-2")
+                }, 2000);
+            })
+        }
+        function myPromise3() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("fatching data 3")
+                    resolve("data-3")
+                }, 2000);
+            })
+        }
+
+        // start execution at once
+
+        //  p1.then((resolve)=>{
+        //     console.log(resolve)
+        //  })
+        //  p2.then((resolve)=>{
+        //     console.log(resolve)
+        //  })
+        //  p3.then((resolve)=>{
+        //     console.log(resolve)
+        //  })
+
+        //end: fulfiled the code on time without waiting
+
+
+        // now promise chain: wait for 1st code execution then run next code
+
+        let p1 = myPromise1()
+        p1.then((result) => {
+            console.log(result)
+            let p2 = myPromise2()
+            p2.then((result) => {
+                console.log(result)
+                let p3 = myPromise3()
+                p3.then((result) => {
+                    console.log(result)
+                })
+            })
+        })
+
+    </script>
+</body>
+
+</html>

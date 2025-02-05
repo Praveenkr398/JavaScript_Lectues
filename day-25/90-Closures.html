@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 91: Closures</title>
+</head>
+
+<body>
+    <h1>Closures</h1>
+    <p>funtion along with its lexical invironment</p>
+    <script>
+
+
+//  let a1 = 98; /// used by y 
+//         const x = () => {
+//             let a = 1
+//             console.log(a)
+//             const y = () => {
+//                 // let a = 2
+//                 console.log(a1)
+//                 const z = () => {
+//                     let a = 3
+//                     console.log(a)
+//                     console.log(a1)
+//                 }
+//                 z()
+//             }
+//             y()
+//         }
+
+//         x()
+
+
+        function returnFun() {
+            const x = () => {
+                let a = 1
+                console.log(a)
+                const y = () => {
+                    // let a = 2
+                    console.log(a)
+                    const z = () => {
+                        // let a = 3
+                        console.log(a)
+                    }
+                    z()
+                }
+                a = 9898 //used by y z
+                y()
+            }
+
+            x()
+            return x
+        }
+
+        returnFun()
+        
+
+
+    </script>
+</body>
+
+</html>

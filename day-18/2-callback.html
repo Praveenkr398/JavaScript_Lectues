@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback as argument pass in another funtion</title>
+</head>
+
+<body>
+    <h1>Callback</h1>
+    <script>
+
+        // callback as synchronus
+        function sum(a, b) {
+            console.log(a + b);
+        }
+
+        function calculator(a, b, sumCallback) {
+            sumCallback(a, b)
+        }
+
+        sum(3, 4, calculator) // same as
+
+        // same as 
+        calculator(5, 6, (a, b) => {
+            console.log(a + b);
+        })
+
+        let CarNum = ()=>{
+            user = prompt("enter your car number here")
+            console.log("your car number is ", user)
+        }
+         
+       setTimeout(CarNum, 2000);
+
+    </script>
+</body>
+
+</html>

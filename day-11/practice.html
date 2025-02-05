@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice of AP (DoM)  </title>
+    <style>
+        h1{
+            font-size: 40px;
+            font-family: cursive;
+            border-bottom: 2px solid saddlebrown;
+            width: 600px;
+            color: rgb(254, 255, 255);
+            background-image: linear-gradient(rgb(255, 255, 255), white,rgb(6, 6, 255));
+            text-shadow: 2px 2px black,-2px -1px rgb(114, 114, 250);
+            
+        }
+
+        #myBox{
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            background-color: red;
+        }
+
+       .box{
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;    
+            padding-top: 50px;
+            font-size: 30px;
+            background-color: rgb(146, 233, 198);
+        }
+       .box1{
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;    
+            padding-top: 50px;
+            font-size: 30px;
+            background-color: rgb(5, 92, 254);
+        }
+    </style>
+</head>
+<body>
+    <h1>my heading </h1>
+
+
+
+    <span id="myBox">
+        
+        <div class="box">box-1</div>
+        <div class="box">box-2</div>
+        <div class="box">box-3</div>
+        <div class="box">box-4</div>
+        <div class="box">box-5</div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+       <div class="box1"></div>
+    
+    </span>
+
+    <script>
+        // 1: add H1 to ("for web page")
+         let myHead = document.querySelector("h1");
+       console.log(myHead.innerText)
+       myHead.innerText ="Q1: " + myHead.innerText + " for webpage"
+
+
+       // 2 : create multiple div and change it's values 
+        let myBox = document.querySelectorAll(".box")
+        console.log(myBox[1])
+        myBox[0].innerText = "value 1"
+        myBox[1].innerText = "value 2"
+        myBox[2].innerText = "value 3"
+        myBox[3].innerText = "value 4"
+        myBox[4].innerText = "value 5"
+
+        // creating with loops
+
+        let Mbox = document.querySelectorAll(".box1");
+        console.dir(Mbox);
+       let idx = 1;
+for ( Mboxx of Mbox ){
+    Mboxx.innerText = `box  ${idx}`;
+    idx++
+}
+
+
+    </script>
+</body>
+</html>

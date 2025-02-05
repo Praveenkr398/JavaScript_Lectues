@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice set 1: Apna College</title>
+</head>
+<body>
+    <h1>practice-1</h1>
+    <script>
+        //Q1: create class of user to get viewdata and store name and email of 3 user
+
+        class user {
+            constructor(name,email){
+                this.name = name;
+                this.email = email;
+            }
+
+            viewData (){
+                console.log("welcome to your dashboard")
+                console.log(`Name: ${this.name}\nemail: ${this.email}`)
+            }
+          
+        }
+
+     
+        
+        //Q2: add admin to the user of "Q1" get access to log in
+        
+        class admin extends user {
+            input (){
+                console.log("Thanks for Come back mister", this.name)
+            }
+          
+        }
+
+        let student1 = new user("Mohan","mk33@gmail.com")
+        let student2 = new user("Rahul","rk89@gmail.com")
+
+    console.log("student-1",student1)
+    console.log("student-2",student2)
+
+    let principle = new admin("SuryaKant", "Srk55@gmail.com")
+    console.log("Principle",principle)
+    console.log(principle.input())
+
+    let teacher
+
+    // instanceof : check any object belongs to any class or not 
+   
+    console.log(student1 instanceof user)   // true bcx student1 is object of user
+    console.log(principle instanceof user) // true bcx principle is object of user
+    console.log(teacher instanceof user) // false bcx teacher is not object of user
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 11</title>
+</head>
+<body>
+    <h1 style="font-family:sans-serif;">Practice: chepter 11</h1>
+<div style="font-family:sans-serif;">
+
+    Q1: create class with complex and a b object  <br>
+    Q2: use get and set new value of a and b <br>
+    Q3: create new class with human with 2 object  <br>
+    Q4: override any methode of Q3 <br>
+    Q5: check Q4 object has instance of human class or not <br>
+</div>
+    
+    <script>
+
+        // Q1 & Q2
+        class complex {
+            constructor(real,unreal){
+                this._real = real;
+                this._unreal = unreal;
+            }
+
+            get real(){
+                return this._real
+            }
+
+            set real(newReal){
+                this._real = newReal
+            }
+
+            get unreal(){
+                return this._unreal
+            }
+
+            set unreal(newUnreal){
+                this._unreal = newUnreal
+            }
+        
+
+            view(){
+                console.log(`Real num: ${this.real}, Un-Real num: ${this.unreal}`)
+            }
+        }
+
+        let a = new complex (8,4);
+        let b = new complex (2,6);
+        console.log(a.view(),b.view())
+
+        // setting new values of a and b
+        a.real = 10
+        a.unreal = 5
+        b.real = 20
+        b.unreal = 50
+        console.log(a.view(),b.view())
+
+        // Q3 & Q4
+
+        class human {
+            constructor(name,eat,sleep){
+                this.name = name;
+                this.eat = eat;
+                this.sleep = sleep;
+            }
+            details(){
+                console.log(`Hey! I am ${this.name}, i eat ${this.eat} and i need to sleep atleast ${this.sleep}`)
+            }
+        }
+        
+        class kid extends human {
+            info(){
+                console.log("i am kid, i need mom's milk not cow's milk ")
+            }
+        }
+
+
+
+        let baby = new kid ("kid","milk","14Hr")
+        let young = new human("young","food","8Hr")
+        console.log(baby.details())
+        console.log(baby.info())
+        console.log(young.details())
+
+        console.log(baby instanceof kid)
+        console.log(baby instanceof human)
+        console.log(young instanceof human)
+        console.log(young instanceof kid)
+    </script>
+</body>
+</html>

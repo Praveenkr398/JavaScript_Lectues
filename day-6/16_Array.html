@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 16 : Array</title>
+</head>
+<body>
+    <h1>Lecture 16 : Array</h1>
+    <script>
+        // array are variable but its hold more value and may be diff types of
+        
+        let array = [3,5,6,29,] //index starts from 0
+        console.log(array)
+
+        let array1 = [2,5,6, null, "strings"]  // diff types
+        console.log(array1)
+        console.log(array1.length)
+        console.log(typeof array1)
+
+        let array2 = ["delhi","mumbai","pune"]
+        console.log(array2[0]) // delhi bcz index from 0
+        console.log(array2[1])
+        console.log(array2[2])
+        console.log(array2[3]) // undefined bcz values is not avaible
+        
+        // array can be change/add value unline variable can't be changed/add
+        
+        let array4 = [1,2,3,,5,6,7,8,9,0]
+        
+        array4[3] = 4 // add 4 between 3 and 5 bcz ,, empty for one value
+        console.log(array4)
+        array4[6] = "New" // repleace 6 to 'New'
+        console.log(array4)
+        array4[10] = "add" // repleace 6 to 'New'
+        console.log(array4)
+        
+    </script>
+</body>
+</html>

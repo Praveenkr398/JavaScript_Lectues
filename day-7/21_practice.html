@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 21: Practice</title>
+</head>
+<body>
+    <script>
+
+// Q1 : get number from user and add to an array
+
+        // let data = [2,34,33,22,29,200]
+        // let input = prompt ("Enter any Number")
+        // input = Number.parseInt(input)
+        // data.push(input)
+        // console.log(data)
+
+// Q2 : keep adding number until enter 5 
+
+        // let num = [1,2,3,4]
+        // let input;
+        // do {
+        //     input = prompt("what will come after 4")
+        //     input = Number.parseInt(input)
+        //     num.push(input)
+        // }while(input != 5 )
+        // console.log(num)  // print invalid values also
+
+// Q3 : filter for array divisible by 5
+
+ let num = [3,5,34,35,89,45,30,75]
+ let val = num.filter((a) =>{
+   return a = a%5
+})
+console.log(val)
+
+// Q4 : make array of Q3's Square
+
+ let num2 = [3,5,34,35,89,45,30,75]
+ let val2 = num2.map((a) =>{
+   return a = a * a
+})
+console.log(val2)
+
+// Q4 : multiply an array
+
+ let num3 = [3,2,4]
+ let val3 = num3.reduce((a,b) =>{
+   return a*b
+})
+console.log(val3)
+
+
+
+
+
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage </title>
+</head>
+
+<body>
+    <h1>Session Storage</h1>
+    <p>Session storage same as Local Storage</p>
+    <p>avaible only on current tab/refresh, not new tab,opening/closing</p>
+
+    <script>
+
+        sessionStorage.setItem("name1", "Rahul")
+        sessionStorage.setItem("name2", "Raghudas")
+        sessionStorage.setItem("name3", "Puneet")
+
+        sessionStorage.getItem("name1") // get the value of key
+        sessionStorage.setItem("name1", "Navdeep") // update name1
+        sessionStorage.setItem("name", "SuryaKant") // add new item
+        sessionStorage.removeItem("name") // remove name
+        //    console.log(sessionStorage.clear()) // clear all item 
+        console.log(sessionStorage.key(3)) // position of item
+        console.log(sessionStorage.length) // length of all items
+
+        console.log(sessionStorage)
+
+
+        // Storage Event: make Alert when updates
+        //   let newData = window.onstorage = ((e) => {
+        //         alert("Some update");
+        //         console.log(e);
+        //     })
+    </script>
+</body>
+
+</html>

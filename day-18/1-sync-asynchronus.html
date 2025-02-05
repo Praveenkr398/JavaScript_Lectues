@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna College: Synchronus & ASyncrhonus</title>
+</head>
+
+<body>
+    <h1>Apna College: Synchronus & ASyncrhonus</h1>
+
+    <script>
+        // Synchronus programming: 
+        // return the values one by one, wait for previous code to execute
+        console.log("Example of Synchronus")
+        console.log("code-1")
+        console.log("code-2")
+        console.log("code-3")
+        console.log("code-4")
+        console.log("code-5")
+
+        // Asyncrhonus programming: 
+        // code executing at same time dont wait for previous code to executed 
+        console.log("Example of Asynchronus")
+
+
+        console.log("code-1")
+        console.log("code-2")
+
+        setTimeout(() => {
+            console.log("code-3")  // code-3 , executed after 2second, but next code don't wait for it.
+        }, 2000);
+
+        console.log("code-4")
+        console.log("code-5")
+    </script>
+</body>
+
+</html>

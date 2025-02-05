@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 75: ProtoType</title>
+</head>
+<body>
+    <h1>Inheritance Prototype</h1>
+    <p>used for access property from its prototype . if unavailable its object</p>
+    <script>
+
+        let person1 = {
+            Name : "Mohit",
+            Age : 34,
+        }
+
+        let person2 = {
+            Name : "Rahul",
+            Age : 35,
+            salary : 10000,
+        }
+
+        person1.__proto__ = person2
+
+        // console.log(person1.salary)
+
+
+        let data = {
+            Local : "india"
+        }
+
+        let data1 = {
+            salary : "500000"
+        }
+
+        let data2 = {
+            expert : "web dev"
+        }
+        
+        // console.log(person1.Name); // return Mohit bcx person1 have Name 
+        // console.log(person1.Local); // don't return local : india bcx person1 havn't but
+        
+        // person1.__proto__ = data; // now set the prototype of persone. = data
+        // console.log(person1.Local) // return local bcx now person1 can access data property
+
+        // chaining prototype ; access prototype inside prototype
+        data.__proto__ = data1; // data1 prototype of data
+        data1.__proto__ = data2; // data2 prototype of data1
+        person1.__proto__ = data
+        console.log(person1.Age) // value from its object
+        console.log(person1.Name) // value from its object
+        console.log(person1.Local) // value from data prototype
+        console.log(person1.salary) // value from data > data1 
+        console.log(person1.expert) // value from data > data1 
+
+        
+    </script>
+</body>
+</html>

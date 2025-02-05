@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 60 : error handing with try and catch</title>
+</head>
+<body>
+    <h3>try and catch works only with asynchronus function not with shedual function like SetTimeout</h3>
+    <script>
+        let para1 = "1st code "
+        let para2 = "2nd code "
+        let para3 = "3rd code "
+        let para4 = "4th code "
+        let para5 = "5th code "
+
+        console.log(para1)
+        try {
+          
+            console.log(para21) // wrong value next code not exicuting: use try and catch
+        }
+        catch(err) {
+            console.log("there is some problem" ,err) // error handled now next code exicuting
+          }
+          console.log(para3)
+          console.log(para4)
+          console.log(para5)
+
+    </script>
+</body>
+</html>

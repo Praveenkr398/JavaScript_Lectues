@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lect-10:stack and heap memory</title>
+</head>
+
+<body>
+    <script>
+        // stack: primitive , copy
+        let myNameWas = "nIkky"
+        let myNameIs = myNameWas;
+        myNameIs = "Praveen"
+        console.log("This is my Name;", myNameIs)
+        console.log("This was my Name;", myNameWas)
+
+        // heap : non primitive, Reference
+        let myData = {
+            fName: "Mohit",
+            lName: "kumar",
+            age: 33
+        }
+        
+        console.log(myData)
+        let newData = myData; 
+        newData.from = "bihar" // add new value
+        console.log(newData) // newData = myData 
+        console.log(myData)  // myData value changed
+
+
+
+    </script>
+</body>
+
+</html>

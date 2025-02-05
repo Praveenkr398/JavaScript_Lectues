@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12: Number & Math</title>
+</head>
+
+<body>
+    <!-- _____Number_______ -->
+    <script>
+        let someNumber = 200;
+        console.log(typeof someNumber, someNumber)
+
+        let AnotherNumber = new Number(34.5)
+        console.log(typeof AnotherNumber, AnotherNumber)
+
+        //  some methode appyling
+
+        console.log(AnotherNumber.toExponential())
+        console.log(AnotherNumber.toFixed())
+        console.log(AnotherNumber.toLocaleString())
+        console.log(AnotherNumber.toPrecision())
+        console.log(AnotherNumber.valueOf())
+        console.log(AnotherNumber.toString().length) // now number change in string . string methode can be appled now
+        console.log(AnotherNumber.toString().slice(6))
+    </script>
+
+    <!-- _____ Math ______ -->
+    <script>
+       
+        console.log(typeof Math,Math)
+        console.log(Math.abs(-83)) // return + value only
+        console.log(Math.round(23.2)) //23
+        console.log(Math.round(23.6)) // 24
+        console.log(Math.floor(34.8)) // 34
+        console.log(Math.floor(34.1))  // 34
+        console.log(Math.ceil(34.1)) // 35
+        console.log(Math.ceil(34.7)) // 35
+        console.log(Math.min(4, 56, 8, 2)) // 2
+        console.log(Math.max(4, 56, 8, 2)) // 56
+
+        // random : return 0 - 1 only
+        console.log(Math.random()) // 0 - 1 with 0.34343 , 1.343435
+        console.log(Math.random() * 10) // 0 - 10 (digit shifting that's why return 1,2,3,4,,5,6,7,8,9,)
+        console.log((Math.random() * 10) + 1) // +1 ( dont show 0 now)
+        console.log(Math.floor(Math.random() * 10) + 1) // +1 ( dont show 0 now)
+
+        // random number between 10 & 20
+        const min = 10;
+        const max = 20;
+        console.log(Math.floor(Math.random() * (max - min + 1)) + min)
+
+        // 50 & 100
+        const min50 = 50;
+        const max100 = 100;
+        console.log(Math.floor(Math.random() * (max100 - min50 + 1)) + min50)
+
+        // 500 & 1000
+        const min500 = 500;
+        const max1000 = 1000;
+        console.log(Math.floor(Math.random() * (max1000 - min500 + 1)) + min500)
+
+    </script>
+</body>
+
+</html>

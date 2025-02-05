@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback hell </title>
+</head>
+
+<body>
+    <h1>callback hell</h1>
+    <p>callback hell / piramide of doom</p>
+
+    <script>
+        let getData = (dataId, getNextData) => {
+            setTimeout(() => {
+                //    let dataId = prompt("enter")
+                if (getNextData) {
+                    getNextData()
+                }
+                console.log("data ", dataId)
+                
+            }, 3000);
+        }
+
+        getData(1, () => {
+            getData(2, () => {
+                console.log("fatching data-2 ....")
+                getData(3, () => {
+                    console.log("fatching data-3 ....")
+                    getData(4, () => {
+                        console.log("fatching data-4 ....")
+                        getData(5);
+                        console.log("fatching data-5 ....")
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

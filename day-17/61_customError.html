@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 61 : error object & custom error </title>
+</head>
+<body>
+    <script>
+
+try{
+let user = prompt ("Hey! Enter your Age!")
+    user = Number.parseInt(user)
+    console.log(user2)
+    
+}
+catch(err){
+    // throw new Error("having some problem")
+    // console.log(err.name) // print only name of error type
+    // console.log(err.message) // print only error message
+    console.log(err.stack) // print error with reference
+}
+
+console.log("Running this code")
+
+     
+    </script>
+</body>
+</html>

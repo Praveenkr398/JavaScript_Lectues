@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async - Await : IIFE</title>
+</head>
+<body>
+    <h1>Async & Await </h1>
+    <p>Async: always return a promise, </p>
+    <p>Await: pauses the other execution</p>
+    <script>
+        function getData(dataId){
+            return new Promise ((resolve,reject)=>{
+                setTimeout(() => {
+                    console.log("data",dataId)
+                    resolve(200)
+                }, 2000);
+            })
+        };
+        
+
+
+        // IIFE : immediately invoked function expresion
+        // execute code as defined without creat new function
+      ( async function  (){
+        console.log("fatching data 1")
+        await getData(1);
+        console.log("fatching data 2")
+        await getData(2);
+        console.log("fatching data 3")
+        await getData(3);
+        console.log("success")
+        })()
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 52 : Callbacks</title>
+</head>
+
+<body>
+    <h1>Lecture 52 : Callbacks</h1>
+    <p id="demo"></p>
+
+    <script>
+
+        // synchronus programming? run one by one
+
+        // let fName = prompt("Hey! What's your Name?")
+        // let Age = prompt("How old are you?")
+        // let fevColor = prompt("What's your fevorite color")
+        // let conform = confirm("Do you want to print your data?")
+        // console.log("Hey! " + fName + ". Your Age is " + Age + ". and Your Fevorite Color is " + fevColor)
+
+
+
+
+
+        //Asynchronus Programming? run same time but excute on time (SetTimeOut)
+
+        console.log("Starting Here....")
+
+        setTimeout(() => {
+            console.log("print after 5s")    // this is print after 5 second but start exicuting
+        }, 5000);
+
+        console.log("Ending Here...")
+
+
+
+        // callback: function as argument 
+
+        function loadScript(src, callback) {
+            var script = document.createElement("script");
+            script.src = src;
+         
+                console.log("Script loaded with URL: " + src);
+                callback(src);
+            
+            document.body.appendChild(script);
+            }
+
+
+        // function hello () {
+        //     alert ("Hello mister!");
+        // }
+        function newURL (src) {
+           console.log("added url : " + src);
+        }
+
+        loadScript("https://www.w3schools.com/js/default.asp",newURL)
+
+    </script>
+
+</body>
+
+</html>

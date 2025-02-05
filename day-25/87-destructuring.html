@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 91: destructuring</title>
+</head>
+<body>
+    <h1>destructuring</h1>
+    <p>used to unpack valuse from array and object into distinc variable.</p>
+    <script>
+        // object 
+        const person = {
+            fName: "Mohit",
+            lName: "kumar",
+            Age: 34,
+        }
+        console.log(person)
+        
+        // fname and age from person object
+        const {fName,Age} = person
+        console.log(fName,Age)
+        
+        //    change valuse of last name 
+        console.log({...person, lName:"Singhaniya"}) // changed last name
+        console.log({fName:"Rahul", ...person}) // not changed first name
+        // String 
+        const WebName = "W3School"
+        const  [a,b,c] = WebName
+        console.log(a,b,c) // result: w 3 s
+        const [a1,,,,a2,a3] = WebName
+        console.log(a1,a2,a3) //skip(3,s,c,):  w,h,o 
+        const [...rest] = WebName 
+        console.log(rest) // print all
+        const [,,...restt] = WebName 
+        console.log(restt) // skipp (W,3) , S C H O O L
+
+        // Array 
+        let student = [2,3,4,5,6,7,8,9];
+        // let [s1,s2,,,,s3] =student;
+        // console.log(s1,s3)
+        let [s1,,,s2,...std] =student;
+        console.log(s1,s2,std)
+        console.log(...student)
+        console.log(student)
+
+        
+    </script>
+</body>
+</html>

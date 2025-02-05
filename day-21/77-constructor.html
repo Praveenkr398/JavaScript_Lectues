@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 77 : constructor</title>
+</head>
+<body>
+    <h1>constructor</h1>
+    <p>it invoked when new object created</p>
+    <p>used for same type of many object</p>
+    <script>
+        class RellForm{
+            constructor(Name,Age,State,Salary,Experience){ // this will used for multiple object property
+                console.log("running")
+                this.Name = Name;
+                this.Age = Age;
+                this.State = State;
+                this.Salary = Salary;
+                this.Experience = Experience;
+            }
+            preview(){
+                console.log("your Name: " + this.Name + ", Age: " + this.Age + ", Salary: " + this.Salary + ", State: " + this.State + " and your Experience: "  + this.Experience)
+            }
+            notice(){
+            alert("this is alert message")
+            }
+        }
+
+        let person1 = new RellForm("Mohit Kumar",24,"Bihar","25k","Fresher")
+        let person2 = new RellForm("Rahul Kaur",43,"Delhi","75k","3 Years")
+        let person3 = new RellForm("Komal Dev",32,"Pune","55k","2 Years")
+        let person4 = new RellForm("SuryaKant Singh",35,"Pune","90k","5 Years")
+
+    //    console.log(person1)
+    //    person1.preview();
+    //    person2.preview();
+    //    person3.preview();
+    //    person4.preview();
+
+    // //    print as table 
+       console.table( person1);
+       console.table( person2);
+       console.table( person3);
+       console.table( person4);
+
+      
+    </script>
+</body>
+</html>

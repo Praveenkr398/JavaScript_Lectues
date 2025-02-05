@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture_13: Strings methods</title>
+</head>
+<body>
+    <h1>Lecture_13: Strings methods</h1>
+
+    <script>
+        // Lecture_13: Strings methods
+
+
+        let myName = "Mohit kumar"
+
+        // Extracting String Characters
+        console.log(myName)
+        console.log(myName.length) // lenth of myName : 11
+        console.log(myName.charAt(3)) // 3rd char from index(0)
+        console.log(myName[3]) // same as charAt()
+        console.log(myName.charCodeAt(3)) // 3rd char unicode 
+
+        // Extracting String Parts
+
+        let fruits = "Apple, Banana, Kiwi"
+
+        console.log(fruits.length) // length : 19
+        console.log(fruits.slice(3)) // print from 4th letter to end
+        console.log(fruits.slice(6,19)) // print from 7 to 19
+        console.log(fruits.slice(3)) // print from 7 to 19
+        console.log(fruits.substring(3,9)) // same as slice
+        console.log(fruits.substr(3))
+
+       
+    </script>
+</body>
+</html>

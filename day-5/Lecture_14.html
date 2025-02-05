@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture_14: Strings methode 2</title>
+</head>
+<body>
+    <h1>Lecture_14: Strings methode 2</h1>
+    <script>
+        //Lecture_14: Strings methode
+        let fName = "praveen kumar"
+        console.log("praveen kumar : ", fName.length) // length of chart
+
+        //index of charector
+        console.log(fName.charAt(0)) // index from 0 " 0=p"
+        console.log(fName.charAt(1)) // index from 0 " 1=r"
+        console.log(fName.charAt(6)) // index from 0 " 5=n"
+
+        // convert text 
+        console.log(fName.toUpperCase()) // uppercase
+        console.log(fName.toLowerCase()) // lowercase
+
+        // char code unicode;
+        console.log(fName.charCodeAt(0))
+        console.log(fName.charCodeAt(1))
+        console.log(fName.charCodeAt(5))
+
+        //slice : cut the char start to end
+        let job = "FrontendWebDeveloper"
+        console.log(job) 
+        console.log(job.slice(3)) // write from 4th letter : ndWebDeveloper
+        console.log(job.slice(8,14)) // write from 9th to 14th letter : ndWebDeveloper
+
+        // trim : trim out white from start and end
+
+        let myCar = "        volvo, BMW,         maruti     suzuki"
+        console.log(myCar)
+        console.log(myCar.trim())
+        console.log(myCar.trimEnd())
+        console.log(myCar.trimLeft())
+        console.log(myCar.trimStart())
+        console.log(myCar.trimRight())
+
+        // Repeat : write again and again times 
+        let myDream = "Doctor "
+        console.log(myDream)
+        console.log(myDream.repeat(5))
+
+        // Replace : replace the first match only
+        let comp = "microsoft google microsoft zepto flipkar "
+        console.log(comp)
+        console.log(comp.replace("google","uber")) // replace google to uber
+        console.log(comp.replace("microsoft","my fev comp:")) // replace only 1st microsoft not 2nd
+        console.log(comp.replace("\microsoft\g","Amazon is")) // replace only 1st microsoft not 2nd
+        console.log(comp.replace("mircosoft","ok"))
+
+        // concat : connect varibale 
+
+       let friend1 = "kavya"
+       let friend2 = "Moniya"
+       let friend3 = "Rahul"
+        
+        console.log(friend1.concat(" is friends of both "+ friend2 + " and " + friend3
+        ))
+        
+        
+
+
+    </script>
+</body>
+</html>

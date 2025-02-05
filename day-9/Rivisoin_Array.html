@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivision: Arrays</title>
+</head>
+<body>
+    <h1>Rivision Arrays</h1>
+
+    <script>
+    // Rivision Arrays
+
+    // how to create array in js
+// Array holds multi values and multi type of data
+        let  myArray = [3,4,5,29, true, "Leo Das"] // create: = [values]
+        console.log(myArray)
+
+        let myArray1 = new Array (1,3,49,19,"text"); // same as myArray ? watch 1st example
+        console.log(myArray1)
+        console.log(typeof myArray1) // typeof myArray1 is object
+        console.log(myArray1.length)  // length : 5 / 5 value
+        
+        let mystring = myArray1.toString()  // it will change object to string
+        console.log(myArray1.toString(mystring))
+        console.log(typeof mystring) // now type of myArray1 is String
+
+        // Add and change array value
+
+        let num = [4,5,3,9,48,49];
+        console.log(num)
+        
+        console.log(num[0])  // access the value
+        console.log(num[5]) 
+
+        console.log(num.at(1)) // access; same as [1]
+
+        let newNum = num[0] = [100,200,300] //change the value of 1st element to [ ]
+        console.log(newNum)
+
+        newNum[3] = "new" // add new value to pos:4th
+        newNum[5] = "pos:6" // pos:6th but 5th empty
+        console.log(newNum)
+
+        // Some Array Method given below;
+
+        let NewArt = [3,43,4,5,25,33,29]
+        console.log(NewArt)
+        
+        // string: convert array to string
+        let myStr = NewArt.toString()
+        console.log(myStr) // now array is string seprated with comma (,)
+        console.log(typeof myStr) 
+        
+        // join : JOin Array element by any charector
+        
+        let myjoint = NewArt.join("🤔"); // joint each array element with (🤔)
+        console.log(myjoint) 
+
+        let myjoint1 = NewArt.join("____"); // joint each array element with (____)
+        console.log(myjoint1) 
+
+        // pop & push : remove & add any value in the end of array
+
+        let AddNum = [18,20,30,40,50,60,70,80,90,100]
+        console.log(AddNum)
+        
+        //pop methode
+        let outEnd = AddNum.pop() // remove last element
+        console.log(outEnd) // print deleted element
+        console.log(AddNum) // New Array : print without deleted element
+
+        // push methode
+        let AddEnd = AddNum.push(4,3,"kk") // add element in last : 4,3,kk
+        console.log(AddEnd) // print only length 
+        console.log(AddNum) // now print old + pushed value together
+
+        // shift & unshift : remove & add any value in the start of array
+        let AddNum1 = [18,20,30,40,50,60,70,80,90,100]
+        console.log(AddNum1)
+
+        // shift methode
+        let AddSrt = AddNum1.shift() // remove starting element
+        console.log(AddSrt) // print deleted element
+        console.log(AddNum1) // New Array: print without deleted element
+
+        //unshift methode
+        let OutSrt = AddNum1.unshift(45) // add (45) in starting
+        console.log(OutSrt) // print only length
+        console.log(AddNum1) // now print 45 + other element 
+       
+        //unshift methode
+        let OutSrt1 = AddNum1.unshift(45,8,"Many value") // add (many values) in starting
+        console.log(OutSrt1) // print only length
+        console.log(AddNum1) // now print 45 + other element 
+
+        // slice methode
+        let numCut = AddNum1.slice(2) // remove pos: 1,2 and print from 3 to end
+        console.log(numCut)
+
+        let numCut1 = AddNum1.slice(4,8) // remove pos: 1,2,3,4 and print from 5,6,7,8 ()
+        console.log(numCut1)
+        
+
+        // splice methode : carry 3 values;
+       
+        
+        let myArr = ["1st","2nd","3rd",4,5,6,"7th"] // array 
+        console.log("my splice array ", myArr)
+
+        let NewArr = myArr.splice(3,3,"4th","5th","6th")
+         //                 "position" after 3 :1,2,3 
+        //                 "remove" remove 3 : 4,5,6
+        //                 "Add" Add after 3 : "4th","5th","6th"
+
+        console.log(NewArr)  // look which element deleted
+        console.log(myArr) // create new array with adding splice value
+
+        // sort methode : 
+
+        // sort by 1st all 1 (1,19,123): then 2 (2,29,289) etc 3,4,5
+        // like this : 1,2,4,49,442,5,69,700,9
+
+        let myNumsort = [1,3,5,6,2,63,77,12,32,532,77,89,9]
+        console.log("sort this array: ", myNumsort)
+        let newSort = myNumsort.sort()
+        console.log(newSort)
+
+        // sort by number (accending) : make compare funtion : Accend 
+      let Accend = (a,b) => {return a-b} // a-b return accending order
+     let AccSort = myNumsort.sort(Accend)
+     console.log(AccSort)
+
+
+        // sort by number (decending) : make compare funtion : Decend
+      let Decend = (a,b) => {return b-a} // b-a return decending order
+     let DecSort = myNumsort.sort(Decend)
+     console.log(DecSort)
+
+
+     // Loooooooooooooooooops in Arrays
+     
+     let LoopNum = [3,4,5,6,7,8,9,25]
+     console.log("Array for loops", LoopNum)
+     
+     // classical for loop
+
+     for ( i=0; i<LoopNum.length; i++ ){
+        console.log(LoopNum[i]);
+     }
+
+     // for of loop // access array element easily to for loop
+
+     for (let i of LoopNum){ 
+        console.log([i]) // access array element
+     }
+
+     // for in loop
+
+     for (let i in LoopNum){
+         console.log(i) // access array element postion
+        }
+        
+        for (let i in LoopNum){
+    console.log(LoopNum[i]) //access array element
+        } 
+
+        // Array.from : convert object to array
+         let myName = "MOHIT KUMAR"
+        let ArrName = Array.from(myName)
+         console.log(myName)
+         console.log(ArrName)
+
+         // forEach : create loop and modify each element 
+
+         let LoopNum1 = [3,4,5,6,7,8,9,25]
+         console.log(LoopNum1)
+
+         let Add = LoopNum1.forEach((a) => {
+             console.log(a+a) // print value + value
+             
+            })
+
+         let more = LoopNum1.forEach((a,b) => {
+            console.log(a*a )// value * value 
+            console.log(a*3) // value * 3
+
+            })
+
+    </script>
+</body>
+</html>

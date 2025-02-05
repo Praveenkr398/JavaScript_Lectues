@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 91: Arrow function</title>
+</head>
+<body>
+    <h1>Arrow Function</h1>
+    <script>
+        // standard function
+        let a =  function myVal(name){
+           console.log(name)
+        }
+        a("Pushpa Raj")
+
+        // arrow function
+
+        let arr = ((name,age)=>{
+            console.log(name , "is", age, "years old")
+        })
+
+        arr("kumar","34")
+
+        // single parameter
+        let sin = name => console.log("hey", name)
+        sin("divya")
+
+        // multiple parameter then use ()
+        // let sin1 = name,age => console.log("hey", name)
+        // sin1("kajal","33")
+
+        const obj = {
+            name: "sachin",
+            age: 33,
+            from: "Bihar",
+            view: function(){
+                setTimeout(function() { // this: return window object now
+                    console.log(this) // access parent 
+                    
+                }, 2000);     
+            },
+
+            data: function(){
+                setTimeout(()=> { // this: return parent object now
+                    console.log(this) // access parent 
+                    
+                }, 4000);
+        
+                
+            }
+        }
+
+        console.log(obj.view())
+        console.log(obj.data())
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision: Day - 10 (BOM)</title>
+</head>
+<body>
+    <h2>Revision: Day - 10 (BOM)</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+   <p id="demo7"></p>
+   <p id="demo8"></p>
+   <p id="demo9"></p>
+   <p id="demo10"></p>
+   <script>
+        //Revision: Day - 10 (BOM)
+
+        // BOM : browser object model
+
+        // window object model: global (BOM & DOM)
+
+        // windown.screen
+
+        console.log(window.screen.width) // width of user's screen
+        console.log(window.screen.height) // height of user's screen
+
+
+        console.log(screen.availHeight) // same
+        console.log(screen.availWidth)  // same
+
+        console.log(screen.colorDepth) // bit used by one color .. 24
+        console.log(screen.pixelDepth) // same  24
+
+        document.body.style.background = "white"
+
+        // w    indow.location
+        document.getElementById("demo1").innerHTML = "current page lucation:  " + location.href; 
+        document.getElementById("demo2").innerHTML = "internet host name: " + location.hostname;
+        document.getElementById("demo3").innerHTML = "path name: " + location.pathname;
+        document.getElementById("demo4").innerHTML = "protocol: " + location.protocol;
+        document.getElementById("demo5").innerHTML = "no of internet host port: " + location.port;
+        // document.getElementById("demo6").innerHTML = "protocol: " + location.assign("https://www.w3schools.com/js/js_window_location.asp");
+
+    </script>
+
+
+</body>
+</html>

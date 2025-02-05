@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture_15 : Practice Strings</title>
+</head>
+<body>
+    <h1>Lecture_15 : Practice Strings</h1>
+    
+    <script>
+
+        // Q1: length of "Code\"Developer"
+
+        let size = "Code\"Developer" // length: 14 (\" : its single charector)
+        console.log(size.length);
+
+        // Q2: write code with includes, endsWith, StartsWith function
+
+        let myCar = "Volvo"
+        console.log(myCar.includes("Volvo"))  // true : same name
+        console.log(myCar.includes("monu")) // false : wrong name
+        console.log(myCar.startsWith("S")) // false : not start with S
+        console.log(myCar.startsWith("V")) // true : start with V
+        console.log(myCar.endsWith("k")) // false : not end with k
+        console.log(myCar.endsWith("o")) // true : end with o
+
+        // Q3 : convert lower and upper case
+
+        let sentence = "My Fev Coder is MYthoo"
+        console.log(sentence.toUpperCase()) // upperCase
+        console.log(sentence.toLowerCase()) // lowerCase 
+
+        // Q4: extract 1000 from string 
+
+        let stn = "This is my Amount RS 1000"
+        let num = Number.parseInt(stn.slice(21))
+        console.log("MY Amount =",num)
+        console.log(typeof num) 
+
+        // Q5: change 4th char of string
+
+        let friend = "Deepika"
+        console.log(friend)
+        console.log(friend.replace("p","y"))
+    </script>
+</body>
+</html>

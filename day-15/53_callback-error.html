@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Error </title>
+</head>
+
+<body>
+    <script>
+
+
+        // callback: function as argument 
+
+        function loadScript(src, callback) {
+            var script = document.createElement("script");
+            script.src = src;
+
+            script.onload = function () {
+                console.log("Script loaded with URL: " + src);
+                callback(null, src);
+            }
+
+            script.onerror = function () {
+                console.error("Some Error with url" + src);
+                callback(new Error("SRC got some new Error"))
+            }
+
+            document.body.appendChild(script);
+        }
+
+
+        function hello() {
+            alert("Hello mister!");
+        }
+        function newURL(error, src) {
+            if (src) {
+                console.log(src)
+
+                return
+            }
+            alert("added url : " + src);
+
+        }
+
+        loadScript("https://www.we3schools.com/js/default.asp", 
+            
+        )
+
+
+        // callback hell ? unreadable , horizontally code
+
+        // loadScript("https://www.we3schools.com/js/default.asp",
+        //     loadScript("https://www.we3schools.com/js/default.asp",
+        //         loadScript("https://www.we3schools.com/js/default.asp",
+        //             loadScript("https://www.we3schools.com/js/default.asp",
+        //                 loadScript("https://www.we3schools.com/js/default.asp",
+        //                     loadScript("https://www.we3schools.com/js/default.asp",
+        //                         loadScript("https://www.we3schools.com/js/default.asp",
+        //                             loadScript("https://www.we3schools.com/js/default.asp",
+        //                                 loadScript("https://www.we3schools.com/js/default.asp",
+        //                                     loadScript("https://www.we3schools.com/js/default.asp",
+        //                                         loadScript("https://www.we3schools.com/js/default.asp",
+        //                                             loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                 loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                     loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                         loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                             loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                 loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                     loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                         loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                             loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                                 loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                                     loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                                         loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                                             loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                                                 loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                                                     loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                                                         loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                                                             loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                                                                 loadScript("https://www.we3schools.com/js/default.asp",
+        //                                                                                                                     loadScript("https://www.we3schools.com/js/default.asp",
+                                                                                                                            
+        //                                                                                                                 ))))))))))))))))))))))))))))))
+
+
+
+
+
+    </script>
+</body>
+
+</html>

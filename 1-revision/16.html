@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lect-16: object</title>
+</head>
+
+<body>
+    <script>
+        // object in js
+
+        // object singleton
+        //  const objcetName = new Object()
+
+        // Object literal 
+        // const objectName = {}
+
+        // symbol adding to object
+        const user = Symbol("New Employee")
+        const newUserinfo = {
+            fname: "Praveen Kumar",
+            state : "bihar",
+            edu : "Degree",
+            age : 25,
+            exp : "fresher",
+            email: 'pk3@gmail.com',
+            myskil:['HTML','CSS','JS'],
+            [user] : 'New Employee', // access user variable
+
+          
+        }
+
+        // adding new key
+        newUserinfo.salary = 40000 // add
+        newUserinfo.salary = 55000// can't apply
+        Object.freeze(newUserinfo.salary) // can't change salary now
+        newUserinfo.exp = "1yr" // replace exp to 1yr
+
+        // access object keys
+        console.log(newUserinfo)
+        console.log(newUserinfo.fname)
+        console.log(newUserinfo['state'])
+        console.log(newUserinfo.myskil)
+        // console.log(newUserinfo.user) // can't access like this
+        console.log(newUserinfo['user']) //  access like this
+        console.log(newUserinfo.salary)
+        console.log(newUserinfo.exp)
+
+        // work on function
+        newUserinfo.logedIn = function(){
+                console.log(`${this.fname} : loged in at 9AM`)
+            }
+        console.log(newUserinfo.logedIn())
+
+
+
+    </script>
+</body>
+
+</html>

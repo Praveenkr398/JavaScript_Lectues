@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 76: Class and Object</title>
+</head>
+
+<body>
+    <h1>Class and Object</h1>
+    <p>class is templete for object that can used multple times</p>
+    <script>
+        // class keyword for creating class
+
+        class PayForm {
+
+            ApplyForm(name, rellNO) {
+                this.name = name;
+                this.rellNO = rellNO;
+            }
+
+         submit() {
+                alert(this.name + " Your Form is submitted")
+            }
+            Cancel() {
+                alert("Hey! " + this.name + ": Your Form is Cancelled with Ticket No:  " + this.rellNO)
+            }
+
+          
+        }
+
+
+
+       
+
+        // form of Mohit
+        let Mohit = new PayForm()
+       
+        Mohit.ApplyForm('Mohit', 12345)
+        console.log(Mohit)
+
+        // form of Raman
+        let Raman = new PayForm()
+        Raman.ApplyForm("Raman", 12345)
+        console.log(Raman)
+
+        let rohita = new PayForm()
+        rohita.ApplyForm("rohita", 12345)
+        console.log(rohita)
+
+      
+
+        Mohit.Cancel() // call mohit with cancel alert
+        Raman.submit() // call raman with submit alert
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture_13: String</title>
+</head>
+<body>
+    <h2>string intro</h2>
+    <script>
+        // strings introduction
+
+        let fName = "first name" // double quote string
+        console.log(fName);
+        let lName = 'last name' // single quote string
+        console.log(lName);
+
+        // let wrong = "different quote' // this will not work
+        // console.log(wrong)
+
+        // quote " " inside strings
+        let myName = "My first's Name was Nikky" // print ' 
+        console.log(myName)
+
+        // quote inside quote
+        let herName = "Her childhood Name was 'chiku'"
+        console.log(herName)
+
+        let hisName = 'His sir name is "Rathor"'
+        console.log(hisName);
+
+        // Escap sequence using \\ = \, \" = " , \'='
+
+        let fruit01 = "banana's"; // this is ok 
+        console.log(fruit01);
+
+       // let fruit02 = 'banana's'; // this is not ok that quote inside same quote
+       let fruit02 = 'Banana\'s juice' // now ok use ' for \'
+        console.log(fruit02); 
+        console.log(fruit02.length)
+
+        let fruit03 = "Appla\"s" // use " for \"
+        console.log(fruit03);
+
+        let fruit04 = "mango\\banana"; // use backslash :  use \\
+        console.log(fruit04)
+
+        let fruit05 = "Apple Banana Mango" // want all are in new line?
+        let fruit06 = "Apple \n Banana \n Mango" // use : \n
+        console.log(fruit06);
+        console.log(fruit06.length)
+
+
+        // template litral
+
+        let boy1 = "prakash"
+        let boy2 = "vinod"
+        // prakash is friend of vinod
+        let boys = `${boy1} is friend of ${boy2}`
+        console.log(boys)
+
+    </script>
+</body>
+</html>

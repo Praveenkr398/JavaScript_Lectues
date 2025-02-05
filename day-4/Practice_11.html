@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture_11 : Practice questions</title>
+</head>
+
+<body>
+    <h1>Lecture_11 : Practice questions</h1>
+    <!-- Q1: Students mark in For Loop -->
+    <script>
+        console.log("Q1: Students mark in For/in  Loop")
+
+        let marks = {
+            Mohit: 98,
+            Rakesh: 78,
+            Kavya: 68,
+            Rushan: 49,
+            Rahul: 74,
+        }
+
+        // using for loop
+        console.log("using for loop")
+        for (let i=0; i<Object.keys(marks).length; i++){
+            console.log("The marks of " + Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]] )
+        }
+
+        // using for in loop
+        console.log("using for in loop")
+
+        for (let key in marks) {
+            console.log("Student Name: " + key + " & marks: " + marks[key])
+        }
+        
+        // Q2: mean of any 5 digits using function
+        console.log("Q2: mean of any 5 digits using function")
+
+        function mean (a,b,c,d){
+            return(a+b+c+d)/4
+        }
+        console.log("mean of 6,9,3,7 = " + mean(6,9,3,7))
+
+        // // Q3: try again untill enter the currect Number
+        // console.log("Q2: try again untill enter the currect Number" )
+
+        // let CurrectNo = 2025;
+        // let cn;
+
+        // while(cn !=2025) {
+        //     cn = prompt("Enter current year ex: 2025")
+        // } 
+        // alert("Now, you have entered the current year")
+
+    </script>
+</body>
+
+</html>

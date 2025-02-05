@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice : class </title>
+</head>
+<body>
+    <p>class: templete for creating object </p>
+    <p>use <b>class</b> kayword</p>
+    <script>
+        class car {
+            constructor(brand,price){
+                console.log("creating new object using car class")
+                this.brand = brand;
+                this.price = price;
+            }
+            est (){
+                console.log("established in 2020")
+            }
+
+            model(){
+                console.log("model: SZM20")
+               
+            }
+
+            range(){
+                console.log("starting at 5L")
+            }
+
+         
+        }
+
+        class bike extends car {
+
+            constructor(brand,price,ssk){
+              super(brand,price)
+                this.ssk = ssk;
+                console.log("bike constructor")
+            }
+            tier (){
+                
+                
+                console.log("i have 2 tier")
+            }
+
+            
+            range(){
+                super.range()
+            }
+
+
+        }
+
+        let fortuner = new car ("fortuner","8L") // new car
+        console.log(fortuner)
+        
+        let suzuki = new car ("Suzuki", "4L") // new car
+        console.log(suzuki.model())
+
+        let hero = new bike ("hero","80k" ,"poor")
+        console.log(hero.tier())
+        console.log(hero)
+        console.log(hero.brand)
+        console.log(hero.model())
+        console.log(hero.range())
+
+    </script>
+</body>
+</html>

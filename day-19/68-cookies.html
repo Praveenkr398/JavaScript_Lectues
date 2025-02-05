@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture-68 : Javascript Cookies</title>
+</head>
+<body>
+    <h1>js cookies</h1>
+    <p>it's a small string data stored in the browsers</p>
+
+    <!--  Access browser cookies : alert(document.cookie) -->
+
+    <script>
+
+    //     let key = prompt ("Hey! Enter your key.")
+    //     let value = prompt ("Now, Enter the value!")
+    // //    let user = document.cookie =`${key}=${value}` // ok with text or number 
+    //    let user = document.cookie =`${encodeURIComponent(key)}=${encodeURIComponent(value)}` // allow special charector like: <;$%=
+
+    //    console.log(user)
+
+    //    let allC = document.cookie = "fName=Praveen; Lname=Kumar; age=34"
+    //    console.log(allC)
+    
+        let bC = document.cookie 
+        console.log(bC)  // print browser all cookies
+
+        document.cookie = "FullName=Praveen Kumar"
+         document.cookie = "FullName=shacin Kumar"
+    //     let uAge = document.cookie = "Age=24Year Old"
+    //     let uLocal = document.cookie = "Location= Bihar"
+    //     let uNsame = document.cookie = "FullNgame=Praveen_Kumar"
+    //     let uAgse = document.cookie = "Agge=24Year_Old"
+    //     let usLocal = document.cookie = "Locagtion= Bihar"
+    //     let uNsgame = document.cookie = "FullNhame=Praveen_Kumar"
+    //     let uAgsge = document.cookie = "Ageh=h24Year_Old"
+    //     let usLogcal = document.cookie = "Lohcation= Bihar"
+    //     let uNsamge = document.cookie = "FullmName=Praveen_Kumar"
+    //     let uAggse = document.cookie = "Agem=24mYear_Old"
+    //     let usLgocal = document.cookie = "Lmocation= Bihar"
+    //     let uNsagme = document.cookie = "FullNname=Praveen_Kumar"
+    //     let ufAgse = document.cookie = "Agne=24Year_Old"
+    //     let usLdocal = document.cookie = "Locantion= Bihar"
+    //      let uNsamde = document.cookie = "FulelName=Praveen_Kumar"
+    //     let uAgde = document.cookie = "Agee=24Year_Old"
+    //     let usLodcal = document.cookie = "Loceation= Bihar"
+    //      let uNsafme = document.cookie = "FulflName=Praveen_Kumar"
+    //     let uAgdse = document.cookie = "Aged=24Year_Old"
+    //     let usLhocal = document.cookie = "Lfocation= up"  
+    //    let uNsavme = document.cookie = "FuldlkName=Praveen_Kumar" // total 22 cookies
+    //     let ubAgse = document.cookie = "Agees=24Year_Old"
+    //     let usLocabl = document.cookie = "Loceation= Bihar"
+    //     let uNsbame = document.cookie = "FuldlName=Praveen_Kumar"
+    //     let uAgvse = document.cookie = "Agse=24Year_Old"
+    //     let usLoccal = document.cookie = "Loscation= Bihar"
+ 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+body{
+    background-image: url(IMAGE2.jpg);
+    background-clip: content-box;
+    color: rgb(255, 0, 0);
+    font-family: cursive;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+h1{
+    font-size: 50px;
+    margin-top: 20px;
+    color: green;
+}
+
+.box{
+    width: 80vw;
+    height: 70vh;
+    margin: 100px auto;
+    border: 1px solid white;
+    background-color:#383c384b;
+}
+
+p{
+    margin-top: 200px;
+}

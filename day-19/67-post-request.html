@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture-67: Post request</title>
+</head>
+<body>
+    <h1>Lecture-66: Post request</h1>
+    <p>used to get data from the network</p>
+
+    <script>
+        // let p = fetch ("url",Option)
+const createTodo = async(todo)=>{
+        let option = {
+            method : "post",
+            header : {"content-type" : "application/json"},
+            body : JSON.stringify(todo),
+        }
+        let p = await fetch  ("https://goweather.herokuapp.com/weather/dh", option)
+        let response = await p.JSON
+        return response
+    }
+   
+   createTodo()
+       
+    </script>
+</body>
+</html>

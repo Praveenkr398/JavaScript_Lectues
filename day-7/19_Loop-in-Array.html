@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 19: Loops in Array</title>
+</head>
+<body>
+    <h2 class="Head">Lecture 19: Loops in Array</h2>
+    <script>
+        //Lecture 19: Loops in Array
+
+        let num = [4,2,6,67,33,88]
+
+        //Classical for loop
+        for(let i=0; i<num.length; i++){
+            console.log(num[i])            
+        }
+
+        //forEach loop
+        // print every element for all array
+        num.forEach((element)=>{
+            console.log(element+element) 
+            console.log(element*element)
+            console.log(element*5)
+        })
+
+        // Array.from : used for create an array from html object
+        let head = document.getElementsByClassName("Head");
+        let arr = Array.from(head);
+        console.log(arr);
+
+        // for of loop
+        console.log(num)
+        for ( let i of num)
+        console.log(i) // same as for loop but its easy
+
+        // for in loop
+        for ( let i in num)
+        console.log(i) // create position/index of array
+
+
+
+
+    </script>
+</body>
+</html>
